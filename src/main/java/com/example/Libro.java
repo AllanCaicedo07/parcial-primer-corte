@@ -55,5 +55,31 @@ public class Libro {
     public void setNumeroEjemplaresPrestados(int numeroEjemplaresPrestados) {
         this.numeroEjemplaresPrestados = numeroEjemplaresPrestados;
     }
+    
+    //metodos
+
+    public void prestamo() {
+        if (numeroEjemplaresPrestados < numeroEjemplares) {
+            numeroEjemplaresPrestados++;
+            System.out.println("Libro prestado: " + titulo);
+        } else {
+            System.out.println("No hay ejemplares disponibles para prestar.");
+        }
+    }
+
+    public void devolucion() {
+        if (numeroEjemplaresPrestados > 0) {
+            numeroEjemplaresPrestados--;
+            System.out.println("Libro devuelto: " + titulo);
+        } else {
+            System.out.println("No hay ejemplares prestados para devolver.");
+        }
+    }
+
+    @Override
+    public String toString() {
+            return super.toString();
+    }
+
 
 }
