@@ -92,4 +92,5 @@ public class Libro {
                "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
                "\n    └────────────────────────────────────────────┘\n";
     }   
+    
 }
