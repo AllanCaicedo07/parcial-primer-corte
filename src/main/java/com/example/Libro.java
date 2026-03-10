@@ -55,8 +55,8 @@ public class Libro {
     public void setNumeroEjemplaresPrestados(int numeroEjemplaresPrestados) {
         this.numeroEjemplaresPrestados = numeroEjemplaresPrestados;
     }
-    
-    //metodos
+
+    // Métodos
 
     public void prestamo() {
         if (numeroEjemplaresPrestados < numeroEjemplares) {
@@ -78,8 +78,7 @@ public class Libro {
 
     @Override
     public String toString() {
-            return super.toString();
+        return super.toString();
     }
-
 
 }
