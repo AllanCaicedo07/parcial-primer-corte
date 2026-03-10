@@ -92,14 +92,6 @@ public class Libro {
                 "\n    │ 📤 Prestados: " + String.format("%-34d", numeroEjemplaresPrestados) + "│" +
                 "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
                 "\n    └────────────────────────────────────────────┘\n";
-    }
-
-               "\n    │ 📖 " + String.format("%-40s", titulo) + "│" +
-               "\n    │ ✍️  Autor: " + String.format("%-36s", autor) + "│" +
-               "\n    │ 📚 Total: " + String.format("%-38d", numeroEjemplares) + "│" +
-               "\n    │ 📤 Prestados: " + String.format("%-34d", numeroEjemplaresPrestados) + "│" +
-               "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
-               "\n    └────────────────────────────────────────────┘\n";
+    
     }   
-
 }
