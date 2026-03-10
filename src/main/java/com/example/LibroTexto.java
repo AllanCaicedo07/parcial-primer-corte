@@ -24,4 +24,5 @@ public class LibroTexto extends Libro {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+    
 }
