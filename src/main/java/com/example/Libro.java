@@ -58,27 +58,40 @@ public class Libro {
 
     // Métodos
 
-    public void prestamo() {
+    public boolean prestamo() {
         if (numeroEjemplaresPrestados < numeroEjemplares) {
             numeroEjemplaresPrestados++;
             System.out.println("Libro prestado: " + titulo);
+            return true;
         } else {
             System.out.println("No hay ejemplares disponibles para prestar.");
+            return false;
         }
     }
 
-    public void devolucion() {
+    public boolean devolucion() {
         if (numeroEjemplaresPrestados > 0) {
             numeroEjemplaresPrestados--;
             System.out.println("Libro devuelto: " + titulo);
+            return true;
         } else {
             System.out.println("No hay ejemplares prestados para devolver.");
+            return false;
         }
     }
 
-    @Override
+   @Override
     public String toString() {
-        return super.toString();
-    }
 
+        int ejemplaresDisponibles = numeroEjemplares - numeroEjemplaresPrestados;
+        return "\n    ┌────────────────────────────────────────────┐" +
+               "\n    │ 📖 " + String.format("%-40s", titulo) + "│" +
+               "\n    │ ✍️  Autor: " + String.format("%-36s", autor) + "│" +
+               "\n    │ 📚 Total: " + String.format("%-38d", numeroEjemplares) + "│" +
+               "\n    │ 📤 Prestados: " + String.format("%-34d", numeroEjemplaresPrestados) + "│" +
+               "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
+               "\n    └────────────────────────────────────────────┘\n";
+    }
+      return super.toString();
+    }
 }

@@ -32,4 +32,16 @@ public class Novela extends Libro {
     public void setTipo(TipoNovela tipo) {
         this.tipo = tipo;
     }
+    @Override
+    public String toString() {
+        int ejemplaresDisponibles = getNumeroEjemplares() - getNumeroEjemplaresPrestados();
+        return "\n    ┌────────────────────────────────────────────┐" +
+               "\n    │ 📖 " + String.format("%-40s", getTitulo()) + "│" +
+               "\n    │ ✍️  Autor: " + String.format("%-36s", getAutor()) + "│" +
+               "\n    │ 📚 Total: " + String.format("%-38d", getNumeroEjemplares()) + "│" +
+               "\n    │ 📤 Prestados: " + String.format("%-34d", getNumeroEjemplaresPrestados()) + "│" +
+               "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
+               "\n    │ 🎭 Tipo: " + String.format("%-40s", tipo.toString()) + "│" +
+               "\n    └────────────────────────────────────────────┘\n";
+    }
 }
