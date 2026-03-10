@@ -91,7 +91,5 @@ public class Libro {
                "\n    │ 📤 Prestados: " + String.format("%-34d", numeroEjemplaresPrestados) + "│" +
                "\n    │ 📥 Disponibles: " + String.format("%-32d", ejemplaresDisponibles) + "│" +
                "\n    └────────────────────────────────────────────┘\n";
-    }
-      return super.toString();
-    }
+    }   
 }
